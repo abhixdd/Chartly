@@ -1,6 +1,6 @@
-# QuickCharts
+# Chartly
 
-QuickCharts is a lightweight JavaScript library for creating simple yet customizable charts, including bar charts, line charts, and pie charts. It's designed to be easy to use and integrate into your projects.
+Chartly is a lightweight JavaScript library for creating simple yet customizable charts, including bar charts, line charts, and pie charts. It's designed to be easy to use and integrate into your projects.
 
 ## Features
 
@@ -11,14 +11,14 @@ QuickCharts is a lightweight JavaScript library for creating simple yet customiz
 
 ## Installation
 
-You can install QuickCharts via npm or include it directly in your project.
+You can install Chartly via npm or include it directly in your project.
 
 ### Using npm
 
-Run the following command in your project directory to install QuickCharts:
+Run the following command in your project directory to install Chartly:
 
 ```sh
-npm install quickcharts
+npm install chartly
 ```
 
 ### Using a script tag
@@ -26,17 +26,17 @@ npm install quickcharts
 Download the library and include it in your HTML file:
 
 ```js
-<script type="module" src="path/to/quickcharts/src/index.js"></script>
+<script type="module" src="path/to/chartly/src/index.js"></script>
 ```
 
 ## Usage
 
 ### Importing the Library
 
-If you are using modules, you can import QuickCharts as follows:
+If you are using modules, you can import Chartly as follows:
 
 ```js
-import QuickCharts from "quickcharts";
+import Chartly from "chartly";
 ```
 
 ### Example : Creating Charts in HTML
@@ -48,7 +48,7 @@ import QuickCharts from "quickcharts";
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuickCharts Example</title>
+  <title>Chartly Example</title>
 </head>
 
 <body>
@@ -62,7 +62,7 @@ import QuickCharts from "quickcharts";
   <canvas id="pieChart" width="600" height="400"></canvas>
 
   <script type="module">
-    import QuickCharts from 'path/to/quickcharts/src/index.js';
+    import Chartly from 'path/to/chartly/src/index.js';
 
     // Bar Chart
     const barCtx = document.getElementById('barChart').getContext('2d');
@@ -76,7 +76,7 @@ import QuickCharts from "quickcharts";
         borderWidth: 1
       }]
     };
-    new QuickCharts.BarChart(barCtx, barData, {
+    new Chartly.BarChart(barCtx, barData, {
       color: 'blue'
     }).draw();
 
@@ -92,7 +92,7 @@ import QuickCharts from "quickcharts";
         fill: true
       }]
     };
-    new QuickCharts.LineChart(lineCtx, lineData, {
+    new Chartly.LineChart(lineCtx, lineData, {
       color: 'green'
     }).draw();
 
@@ -105,7 +105,7 @@ import QuickCharts from "quickcharts";
       }],
       labels: ['Red', 'Blue', 'Green', 'Yellow']
     };
-    new QuickCharts.PieChart(pieCtx, pieData, {
+    new Chartly.PieChart(pieCtx, pieData, {
       colors: ['red', 'blue', 'green', 'yellow']
     }).draw();
   </script>
@@ -117,11 +117,11 @@ import QuickCharts from "quickcharts";
 
 ### Example: Creating Charts in Node.js
 
-Here's how you can create a bar chart, line chart, and pie chart using QuickCharts in a Node.js script:
+Here's how you can create a bar chart, line chart, and pie chart using Chartly in a Node.js script:
 
 ```javascript
 const { createCanvas } = require("canvas");
-const QuickCharts = require("quickcharts");
+const Chartly = require("chartly");
 
 // Create a canvas and context
 const canvas = createCanvas(600, 400);
@@ -132,7 +132,7 @@ const barData = {
   labels: ["A", "B", "C", "D", "E"],
   datasets: [{ data: [12, 19, 3, 5, 2] }],
 };
-const barChart = new QuickCharts.BarChart(ctx, barData, { color: "blue" });
+const barChart = new Chartly.BarChart(ctx, barData, { color: "blue" });
 barChart.draw();
 
 // Save the Bar Chart as an image
@@ -149,7 +149,7 @@ const lineData = {
   labels: ["January", "February", "March", "April", "May"],
   datasets: [{ data: [5, 10, 15, 20, 25] }],
 };
-const lineChart = new QuickCharts.LineChart(lineCtx, lineData, {
+const lineChart = new Chartly.LineChart(lineCtx, lineData, {
   color: "green",
 });
 lineChart.draw();
@@ -166,7 +166,7 @@ const pieData = {
   datasets: [{ data: [10, 20, 30, 40] }],
   labels: ["Red", "Blue", "Green", "Yellow"],
 };
-const pieChart = new QuickCharts.PieChart(pieCtx, pieData, {
+const pieChart = new Chartly.PieChart(pieCtx, pieData, {
   colors: ["red", "blue", "green", "yellow"],
 });
 pieChart.draw();
@@ -182,7 +182,7 @@ pieOut.on("finish", () => console.log("Pie chart saved as pieChart.png"));
 
 **Constructor:**
 
-new QuickCharts.BarChart(context, data, options)
+new Chartly.BarChart(context, data, options)
 
 **Parameters:**
 
@@ -201,7 +201,7 @@ new QuickCharts.BarChart(context, data, options)
 
 **Constructor:**
 
-new QuickCharts.LineChart(context, data, options)
+new Chartly.LineChart(context, data, options)
 
 **Parameters:**
 
@@ -220,7 +220,7 @@ new QuickCharts.LineChart(context, data, options)
 
 **Constructor:**
 
-new QuickCharts.PieChart(context, data, options)
+new Chartly.PieChart(context, data, options)
 
 **Parameters:**
 
@@ -236,8 +236,8 @@ new QuickCharts.PieChart(context, data, options)
 
 ## Description
 
-QuickCharts provides an easy-to-use interface for generating different types of charts. The library is designed with simplicity and performance in mind, making it suitable for both small and large-scale projects. By leveraging the Canvas API, QuickCharts offers a flexible solution for visualizing data without requiring additional dependencies.
+Chartly provides an easy-to-use interface for generating different types of charts. The library is designed with simplicity and performance in mind, making it suitable for both small and large-scale projects. By leveraging the Canvas API, Chartly offers a flexible solution for visualizing data without requiring additional dependencies.
 
 ## Contributing
 
-We welcome contributions to QuickCharts! If you have suggestions, bug reports, or feature requests, please feel free to submit them through GitHub issues or pull requests. Your feedback and contributions are greatly appreciated!
+We welcome contributions to Chartly! If you have suggestions, bug reports, or feature requests, please feel free to submit them through GitHub issues or pull requests. Your feedback and contributions are greatly appreciated!

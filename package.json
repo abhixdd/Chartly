@@ -1,5 +1,5 @@
 {
-  "name": "quickcharts",
+  "name": "chartly",
   "version": "1.0.0",
   "description": "Create basic charts (bar, line, pie) with minimal setup",
   "main": "src/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhixdd/quickcharts.git"
+    "url": "git+https://github.com/abhixdd/chartly.git"
   },
   "keywords": [
     "charts",
@@ -21,9 +21,9 @@
   "author": "ABHI",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abhixdd/quickcharts/issues"
+    "url": "https://github.com/abhixdd/chartly/issues"
   },
-  "homepage": "https://github.com/abhixdd/quickcharts#readme",
+  "homepage": "https://github.com/abhixdd/chartly#readme",
   "files": [
     "src",
     "examples"
