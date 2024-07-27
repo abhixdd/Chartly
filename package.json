@@ -1,6 +1,6 @@
 {
   "name": "chartly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create basic charts (bar, line, pie) with minimal setup",
   "main": "src/index.js",
   "directories": {
