@@ -25,7 +25,7 @@ npm install simple-chart
 
 Download the library and include it in your HTML file:
 
-```sh
+```js
 <script type="module" src="path/to/simple-chart/src/index.js"></script>
 ```
 
