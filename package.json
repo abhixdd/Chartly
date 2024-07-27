@@ -1,0 +1,26 @@
+{
+  "name": "simple-charts",
+  "version": "1.0.0",
+  "description": "Create basic charts (bar, line, pie) with minimal setup",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhixdd/simple-charts.git"
+  },
+  "keywords": [
+    "charts",
+    "graph"
+  ],
+  "author": "ABHI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhixdd/simple-charts/issues"
+  },
+  "homepage": "https://github.com/abhixdd/simple-charts#readme"
+}
