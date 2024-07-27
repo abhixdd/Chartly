@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimpleChart Example</title>
+    <title>QuickCharts Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,27 +23,27 @@
     <canvas id="pieChart" width="600" height="400"></canvas>
 
     <script type="module">
-        import SimpleChart from '../src/index.js';
+        import QuickCharts from '../src/index.js';
 
         const barCtx = document.getElementById('barChart').getContext('2d');
         const barData = {
             labels: ['A', 'B', 'C', 'D', 'E'],
             datasets: [{ data: [12, 19, 3, 5, 2] }]
         };
-        new SimpleChart.BarChart(barCtx, barData, { color: 'red' }).draw();
+        new QuickCharts.BarChart(barCtx, barData, { color: 'red' }).draw();
 
         const lineCtx = document.getElementById('lineChart').getContext('2d');
         const lineData = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
             datasets: [{ data: [3, 10, 5, 2, 20] }]
         };
-        new SimpleChart.LineChart(lineCtx, lineData, { color: 'green' }).draw();
+        new QuickCharts.LineChart(lineCtx, lineData, { color: 'green' }).draw();
 
         const pieCtx = document.getElementById('pieChart').getContext('2d');
         const pieData = {
             datasets: [{ data: [10, 20, 30, 40] }]
         };
-        new SimpleChart.PieChart(pieCtx, pieData, { colors: ['red', 'blue', 'green', 'yellow'] }).draw();
+        new QuickCharts.PieChart(pieCtx, pieData, { colors: ['red', 'blue', 'green', 'yellow'] }).draw();
     </script>
 </body>
 </html>
