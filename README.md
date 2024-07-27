@@ -115,67 +115,7 @@ import Chartly from "chartly";
 </html>
 ```
 
-### Example: Creating Charts in Node.js
 
-Here's how you can create a bar chart, line chart, and pie chart using Chartly in a Node.js script:
-
-```javascript
-const { createCanvas } = require("canvas");
-const Chartly = require("chartly");
-
-// Create a canvas and context
-const canvas = createCanvas(600, 400);
-const ctx = canvas.getContext("2d");
-
-// Bar Chart Example
-const barData = {
-  labels: ["A", "B", "C", "D", "E"],
-  datasets: [{ data: [12, 19, 3, 5, 2] }],
-};
-const barChart = new Chartly.BarChart(ctx, barData, { color: "blue" });
-barChart.draw();
-
-// Save the Bar Chart as an image
-const fs = require("fs");
-const out = fs.createWriteStream(__dirname + "/barChart.png");
-const stream = canvas.createPNGStream();
-stream.pipe(out);
-out.on("finish", () => console.log("Bar chart saved as barChart.png"));
-
-// Line Chart Example
-const lineCanvas = createCanvas(600, 400);
-const lineCtx = lineCanvas.getContext("2d");
-const lineData = {
-  labels: ["January", "February", "March", "April", "May"],
-  datasets: [{ data: [5, 10, 15, 20, 25] }],
-};
-const lineChart = new Chartly.LineChart(lineCtx, lineData, {
-  color: "green",
-});
-lineChart.draw();
-
-const lineOut = fs.createWriteStream(__dirname + "/lineChart.png");
-const lineStream = lineCanvas.createPNGStream();
-lineStream.pipe(lineOut);
-lineOut.on("finish", () => console.log("Line chart saved as lineChart.png"));
-
-// Pie Chart Example
-const pieCanvas = createCanvas(600, 400);
-const pieCtx = pieCanvas.getContext("2d");
-const pieData = {
-  datasets: [{ data: [10, 20, 30, 40] }],
-  labels: ["Red", "Blue", "Green", "Yellow"],
-};
-const pieChart = new Chartly.PieChart(pieCtx, pieData, {
-  colors: ["red", "blue", "green", "yellow"],
-});
-pieChart.draw();
-
-const pieOut = fs.createWriteStream(__dirname + "/pieChart.png");
-const pieStream = pieCanvas.createPNGStream();
-pieStream.pipe(pieOut);
-pieOut.on("finish", () => console.log("Pie chart saved as pieChart.png"));
-```
 ## API Documentation
 
 ### BarChart
